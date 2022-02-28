@@ -1,0 +1,58 @@
+@graywhite: graywhite;
+@darkgray: darkgray;
+@borderGray: #ccc;
+@green: green;
+@white: white;
+@red: rgb(248, 66, 66);
+@palegreen: palegreen;
+
+div.hangman {
+  font: 12px monaco, monospace;
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hangman input[type="text"] {
+  padding: 5px;
+  border: 1px solid @borderGray;
+  background-color: @graywhite;
+  background-size: 10px 1px;
+  width: 20px;
+  font: 16px monaco, monospace;
+  letter-spacing: 3px;
+  text-indent: 6px;
+  text-transform: uppercase;
+}
+
+.hangman input[type="text"]:focus {
+  border: 1px solid @green;
+  outline: none;
+}
+
+.hangman .has-won {
+  background: @palegreen;
+}
+
+.hangman .has-lost {
+  background: @red;
+  color: @white;
+}
+
+.hangman .link {
+  cursor: pointer;
+}
+
+.simple-keyboard.hg-theme-default.myTheme {
+  border-radius: 10px;
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+
+.simple-keyboard.hg-layout-default .hg-button.hg-correct {
+  background: @palegreen;
+}
+
+.simple-keyboard.hg-layout-default .hg-button.hg-wrong {
+  background: @darkgray;
+}
